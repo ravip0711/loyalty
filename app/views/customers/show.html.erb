@@ -1,0 +1,14 @@
+<h1>Show Customer</h1>
+
+
+<ul>
+  <li>First Name: <%= @customer.first_name %></li>
+  <li>Last Name: <%= @customer.last_name %></li>
+  <li>Phone: <%= @customer.phone %></li>
+  <li>Email: <%= @customer.email %></li>
+  <li>Zip-Code: <%= @customer.zip_code %></li>
+  <li>Birthday: <%= @customer.birthday %></li>
+</ul>
+
+
+<%= link_to "Back", customers_path %>
