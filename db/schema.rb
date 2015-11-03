@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20151103030806) do
     t.string   "phone"
     t.string   "email"
     t.string   "zip_code"
-    t.date     "birthday"
+    t.string   "birthday"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

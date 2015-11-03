@@ -6,7 +6,7 @@ class CreateCustomers < ActiveRecord::Migration
       t.string :phone
       t.string :email
       t.string :zip_code
-      t.date :birthday
+      t.string :birthday
 
       t.timestamps
     end
