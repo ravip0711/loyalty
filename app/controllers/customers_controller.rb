@@ -1,8 +1,5 @@
 class CustomersController < ApplicationController
 
-  def index
-  end
-
   def new
     @customer = Customer.new
   end
@@ -10,19 +7,10 @@ class CustomersController < ApplicationController
   def create
     @customer = Customer.new(customer_params)
     if @customer.save
-      redirect_to @customer
+      redirect_to @customer, notice: "Customer was successfully saved"
     else
-      render :create
+      render 'new', notice: "Customer was unsuccessfully saved"
     end
-
-    # Customer.create(customer_params)
-
-    # render :text => @customer.inspect
-    # if Customer.create(customer_params)
-    #   redirect_to customer_path
-    # else
-    #   render :create
-    # end
   end
 
   def show

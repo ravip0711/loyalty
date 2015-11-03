@@ -1,5 +1,18 @@
 <h1>New Customer</h1>
 
+<% if @customer.errors.any? %>
+  <div id="error_explanation"></div>
+    <h2><%= pluralize(@customer.errors.count, "error") %> prohibited this customer from being saved:</h2>
+
+    <ul>
+      <% @customer.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>  
+
+
 <%= form_for @customer do |f| %>
   <%= f.label :first_name %>
   <%= f.text_field :first_name %><br>
