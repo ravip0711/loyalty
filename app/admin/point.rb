@@ -15,4 +15,6 @@ ActiveAdmin.register Point do
 
 permit_params :point_total, :admin_id
 
+menu priority: 3
+
 end
