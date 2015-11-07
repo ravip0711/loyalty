@@ -36,6 +36,12 @@ end
 
 gem 'activeadmin', github: 'activeadmin'
 
+#used with active admin
+gem 'devise'
+gem 'cancan'
+gem 'draper'
+gem 'pundit'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
