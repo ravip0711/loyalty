@@ -26,4 +26,14 @@ RSpec.describe Customer, type: :model do
     expect(build(:customer, zip_code: nil)).to_not be_valid
   end
 
+  it 'is invalid without a unique phone number' do
+    create(:customer, phone: "1234567899")
+    expect(build(:customer, phone: "1234567899")).to_not be_valid
+  end
+
+  it 'is invalid without a unique email' do
+    create(:customer, email: "abc@efg.com")
+    expect(build(:customer, email: "abc@efg.com")).to_not be_valid
+  end
+
 end
