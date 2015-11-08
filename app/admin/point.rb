@@ -13,8 +13,19 @@ ActiveAdmin.register Point do
 #   permitted
 # end
 
-permit_params :point_total, :admin_id
+permit_params :point_total, :admin_id, :customer_id
 
 menu priority: 3
+
+index do
+  column :id
+  column :point_total
+  column :customer
+  column :admin_id
+  column :created_at
+  column :updated_at
+
+  actions
+end
 
 end

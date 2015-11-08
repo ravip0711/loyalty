@@ -1,5 +1,9 @@
 <h1>Show Customer</h1>
 
+Points:
+<% @points.each do |p| %>
+<%= p.point_total  %>
+<% end %>
 
 <ul>
   <li>First Name: <%= @customer.first_name %></li>

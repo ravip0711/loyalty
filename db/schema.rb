@@ -63,6 +63,7 @@ ActiveRecord::Schema.define(version: 20151107231145) do
   create_table "points", force: true do |t|
     t.integer  "point_total"
     t.integer  "admin_id"
+    t.integer  "customer_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

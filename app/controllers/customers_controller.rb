@@ -24,6 +24,10 @@ class CustomersController < ApplicationController
 
   def show
     @customer = Customer.find(params[:id])
+    @points = @customer.points
+    # do |points|
+    #   points.point_total
+    # end
   end
 
   private
