@@ -1,15 +1,24 @@
 class CustomersController < ApplicationController
 
+  def search
+    render :text => params.inspect
+    # @user = User.find_by phone: params[:phone]
+  end
+
   def new
     @customer = Customer.new
   end
 
   def create
-    @customer = Customer.new(customer_params)
-    if @customer.save
-      redirect_to @customer, notice: "Customer was successfully saved"
+    if @customer = Customer.find_by(phone: customer_params[:phone])
+      redirect_to @customer
     else
-      render 'new', notice: "Customer was unsuccessfully saved"
+      @customer = Customer.new(customer_params)
+      if @customer.save
+        redirect_to @customer, notice: "Customer was successfully saved"
+      else
+        render 'new', notice: "Customer was unsuccessfully saved"
+      end
     end
   end
 

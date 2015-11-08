@@ -1,3 +1,11 @@
 <h1>Index Page</h1>
 
-<%= link_to "Create Customer", new_customer_path %>
+<!-- put link_to for finding an existing customer -->
+
+<%= form_for(Customer.new) do |f| %>
+<%= f.label :phone, "Your Phone Number:" %><br>
+<%= f.text_field :phone %>
+<%= f.submit "Search" %>
+<% end %>
+
+<%= link_to "New Customer", new_customer_path %>
