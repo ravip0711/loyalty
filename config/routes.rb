@@ -2,8 +2,14 @@ Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   root 'customers#index'
-  resources :customers 
-  # do
+  resources :customers do
+    resources :points do
+      get :add
+      get :delete
+    end
+  end
+
+  # resources :customers do
   #   resources :points
   # end
 
