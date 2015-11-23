@@ -8,15 +8,15 @@ For example:
 
 - Some non-app solutions include using just a phone number for their loyalty program. However, the customer then has to log in to a website at a later time to fill out a profile to actually get the rewards. Too many steps, customers in general I don't think will spend the time to do this. Need to have something quick without much effort to get maximum sign ups.
 
-- Many of these loyalty programs do not integrate into the existing Point of Sale software and hardware. They can in theory and that would be amazing, but the price and time to integrate them into various types of software and hardware for many different businesses would take decades. Basically needed a simple, fast solution that can be an addition to the Point of Sale, without having to integrate it, inturn making it as user friendly as possible.
+- Many of these loyalty programs do not integrate into the existing Point of Sale software and hardware. They can in theory and that would be amazing, but the price and time to integrate them into various types of software and hardware for many different businesses would take decades. Need a simple, fast solution that can be an addition to the Point of Sale, without having to integrate it, inturn making it as user friendly as possible.
 
 - It was hard to find any existing solutions that would customize to the benefits I wanted to give to my customers and how I wanted to build my loyalty program. I had two options to consider:
 
-Making an online punchcard, like buy 4 pairs of flip flops, and your 5th one will be 50% off.
+    Making an online punchcard, like buy 4 pairs of flip flops, and your 5th one will be 50% off.
 
-or
+    or
 
-Making a points based system on how much a customer spent in the store and converting it into points and after a certain amount of points, they get some sort of discount.
+    Making a points based system on how much a customer spent in the store and converting it into points and after a certain amount of points, they get some sort of discount.
 
 Anything else that I saw in existing solutions didn't really matter to me, like giving points for each time a customer checks in to a business or buys from a business.
 
@@ -24,10 +24,18 @@ Since many of the solutions I found were too complicated or labor entensive from
 
 ###Install
 
-* Clone
+- Clone the files on to your local machine:
 
-- Clone
+  $ git clone https://github.com/ravip0711/loyalty.git
 
-$ bundle install
+- Using your terminal, navigate to the application directory and run bundle install to gather the necessary gems:
+
+  $ bundle install
+
+- Run the rake commands to create, migrate, and seed the postgres db:
+
+  $ rake db:seed db:migrate db:seed
+
+
 
 
