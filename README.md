@@ -4,13 +4,13 @@ This is a personal project for my retail business called Flip Flop Shops. A lot 
 
 For example:
 
--Lots of these companies created loyalty programs around having your customers download an app on their smartphone. Personally I think a lot of people are not going to download another app on their smart phones to be a part of another loyalty program. The solution has to be much more easier.
+- Lots of these companies created loyalty programs around having your customers download an app on their smartphone. Personally I think a lot of people are not going to download another app on their smart phones to be a part of another loyalty program. The solution has to be much more easier.
 
--Some non-app solutions include using just a phone number for their loyalty program. However, the customer then has to log in to a website at a later time to fill out a profile to actually get the rewards. Too many steps, customers in general I don't think will spend the time to do this. Need to have something quick without much effort to get maximum sign ups.
+- Some non-app solutions include using just a phone number for their loyalty program. However, the customer then has to log in to a website at a later time to fill out a profile to actually get the rewards. Too many steps, customers in general I don't think will spend the time to do this. Need to have something quick without much effort to get maximum sign ups.
 
--Many of these loyalty programs do not integrate into the existing Point of Sale software and hardware. They can in theory and that would be amazing, but the price and time to integrate them into various types of software and hardware for many different businesses would take decades. Basically needed a simple, fast solution that can be an addition to the Point of Sale, without having to integrate it, inturn making it as user friendly as possible.
+- Many of these loyalty programs do not integrate into the existing Point of Sale software and hardware. They can in theory and that would be amazing, but the price and time to integrate them into various types of software and hardware for many different businesses would take decades. Basically needed a simple, fast solution that can be an addition to the Point of Sale, without having to integrate it, inturn making it as user friendly as possible.
 
--It was hard to find any existing solutions that would customize to the benefits I wanted to give to my customers and how I wanted to build my loyalty program. I had two options to consider:
+- It was hard to find any existing solutions that would customize to the benefits I wanted to give to my customers and how I wanted to build my loyalty program. I had two options to consider:
 
 Making an online punchcard, like buy 4 pairs of flip flops, and your 5th one will be 50% off.
 
@@ -24,6 +24,10 @@ Since many of the solutions I found were too complicated or labor entensive from
 
 ###Install
 
-Clone
+* Clone
+
+- Clone
+
+$ bundle install
 
 
