@@ -45,7 +45,7 @@ Since many of the solutions I found were too complicated or labor entensive from
 
 ##Testing
 
-This application is build on Test Driven Development using Rspec and the Capybara gem. As this project grows, I will be including Jasmine testing for javascript.
+This application is built on Test Driven Development using Rspec and the Capybara gem. As this project grows, I will be including Jasmine testing for javascript.
 
 
 
