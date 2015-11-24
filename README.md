@@ -1,4 +1,4 @@
-###Background
+##Background
 
 This is a personal project for my retail business called Flip Flop Shops. A lot of established retail businesses have some sort of a loyalty or rewards system for its frequent shoppers, but unfortunately we do not have one. There are many benefits for having a loyalty program from a business viewpoint (bring in/communicate your best customers more often, offer them more discounts so they buy more, ect.) and there are many companies that provide a loyalty program for businesses like mine that do not have one. However, many of the solutions from these companies did not work for my business completely in an efficient manner.
 
@@ -22,7 +22,7 @@ Anything else that I saw in existing solutions didn't really matter to me, like 
 
 Since many of the solutions I found were too complicated or labor entensive from a customer and business owner standpoint, I decided to make it myself and have it customized to maximize sign ups and efficiency!
 
-###Install
+##Install
 
 - Clone the files on to your local machine:
 
@@ -36,6 +36,16 @@ Since many of the solutions I found were too complicated or labor entensive from
 
   $ rake db:seed db:migrate db:seed
 
+- Launch the rails server:
+  
+  $ rails s
+
+- Open up your browser and navigate to localhost:3000
+
+
+##Testing
+
+This application is build on Test Driven Development using Rspec and the Capybara gem. As this project grows, I will be including Jasmine testing for javascript.
 
 
 
