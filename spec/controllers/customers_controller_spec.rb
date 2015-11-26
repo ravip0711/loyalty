@@ -10,34 +10,34 @@ RSpec.describe CustomersController, type: :controller do
   end
 
   describe "POST #create" do
+    let(:customer) { FactoryGirl.create(:customer, phone: "9999999999")}
+
     context "with valid attributes" do
 
       it "creates a customer" do
         post :create, customer: attributes_for(:customer)
+
         expect(Customer.count).to eq(1)
       end
 
-      it "redirects to the #show action with a blank form for the new customer" do
-        pending("need to add test logic")
-        this_should_not_get_executed
+      it "redirects to the customer path" do
+        post :create, customer: attributes_for(:customer, phone: "9999999999" )
+
+        customer = Customer.last
+        expect(response).to redirect_to(customer)
       end
-
-      it "redirects to the #show/id path if it is an existing customer" do
-        post :create, customer: attributes_for(:customer, phone: "1234")
-        expect(response).to redirect_to(customer_path(assigns(:customer).id))
-      end
-
-
     end
 
     context "with invalid attributes" do
       it "does not create the customer" do
         post :create, customer: attributes_for(:customer, phone: nil)
+
         expect(Customer.count).to eq(0)
       end
 
-      it "re-renders the #new view" do
+      it "re-renders the #new view for a blank phone number" do
         post :create, customer: attributes_for(:customer, phone: nil)
+
         expect(response).to render_template(:new)
       end
     end

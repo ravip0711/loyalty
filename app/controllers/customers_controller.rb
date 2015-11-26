@@ -1,7 +1,7 @@
 class CustomersController < ApplicationController
 
   def search
-    render :text => params.inspect
+    # render :text => params.inspect
     # @user = User.find_by phone: params[:phone]
   end
 
