@@ -10,8 +10,10 @@
       <% end %>
     </ul>
   </div>
-<% end %>  
+<% end %>
 
+<%= params[:phone] %>
+<%= @customer.inspect %>  
 
 <%= form_for @customer do |f| %>
   <%= f.label :first_name %>

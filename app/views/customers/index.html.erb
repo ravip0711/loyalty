@@ -2,10 +2,10 @@
 
 <!-- put link_to for finding an existing customer -->
 
-<%= form_for(Customer.new) do |f| %>
-<%= f.label :phone, "Your Phone Number:" %><br>
-<%= f.text_field :phone %>
-<%= f.submit "Search" %>
+<%= form_tag("search", method: "get") do %>
+<%= label :phone, "Your Phone Number:" %><br>
+<%= text_field_tag :phone %>
+<%= submit_tag "Search" %>
 <% end %>
 
 <%= link_to "New Customer", new_customer_path %>

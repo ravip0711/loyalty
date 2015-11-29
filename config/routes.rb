@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
+
   root 'customers#index'
+  
+  get '/search', to: 'customers#search'
+  
   resources :customers do
     resources :points do
       get :add
