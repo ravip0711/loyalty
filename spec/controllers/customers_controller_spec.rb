@@ -10,12 +10,13 @@ RSpec.describe CustomersController, type: :controller do
   end
 
   describe "Get #search" do
+    let(:customer) { FactoryGirl.create(:customer, phone: "1234")}
+
     it "finds the customer and redirects to customer page" do
-    customer = FactoryGirl.create(:customer, phone: "1234")
-    # get :search, customer: attributes_for(:customer, phone: "1234")
+    get :search, customer: attributes_for(:customer, phone: "1234")
 
     customer = Customer.last
-    expect(response).to redirect_to(customer)
+    expect(response).to redirect_to( assigns[:customer] )
     end
   end
 
