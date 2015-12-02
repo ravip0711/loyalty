@@ -1,3 +1,5 @@
+https://codeship.com/projects/302ab600-7ae4-0133-b18d-26f020c91ee1/status?branch=master
+
 ##Background
 
 This is a personal project for my retail business called Flip Flop Shops. A lot of established retail businesses have some sort of a loyalty or rewards system for its frequent shoppers, but unfortunately we do not have one. There are many benefits for having a loyalty program from a business viewpoint (bring in/communicate your best customers more often, offer them more discounts so they buy more, ect.) and there are many companies that provide a loyalty program for businesses like mine that do not have one. However, many of the solutions from these companies did not work for my business completely in an efficient manner.
