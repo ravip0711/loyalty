@@ -1,4 +1,3 @@
-### Codeship
 [ ![Codeship Status for ravip0711/loyalty](https://codeship.com/projects/302ab600-7ae4-0133-b18d-26f020c91ee1/status?branch=master)](https://codeship.com/projects/119318)
 
 ##Background

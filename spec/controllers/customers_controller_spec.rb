@@ -9,6 +9,7 @@ RSpec.describe CustomersController, type: :controller do
     end
   end
 
+#need to compelete this test
   describe "Get #search" do
     it "finds the customer and redirects to customer page" do
       skip
@@ -27,6 +28,7 @@ RSpec.describe CustomersController, type: :controller do
         expect(Customer.count).to eq(1)
       end
 
+#need to complete this test
       it "redirects to the customer path if customer is existing" do
         post :create, customer: attributes_for(:customer, phone: customer.phone )
 
