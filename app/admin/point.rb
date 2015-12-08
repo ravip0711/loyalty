@@ -13,6 +13,11 @@ ActiveAdmin.register Point do
 #   permitted
 # end
 
+#added for nested points in customers
+controller do
+    nested_belongs_to :customer
+end
+
 permit_params :point_total, :admin_id, :customer_id
 
 menu priority: 3
