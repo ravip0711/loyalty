@@ -1,14 +1,19 @@
 class PointsController < ApplicationController
-#working on routing points
-  # def index
-  #   @customer = Customer.find(params[:customer_id])
-  #   @points = @customer.points.create(point_params) 
-  # end
 
   def new
-    @points = points
-    # @customer = Customer.find(params[:customer_id])
-    # @points = @customer.points.create(point_params) 
+    @customer = Customer.find(params[:customer_id])
+    @point = Point.new
+  end
+
+  def create
+    @customer = Customer.find(params[:customer_id])
+    @point = Point.new(point_params)
+    @point.customer_id = @customer.id
+    if @point.save
+      redirect_to @customer
+    else
+      render 'show'
+    end
   end
 
   def add
@@ -17,7 +22,7 @@ class PointsController < ApplicationController
   private
   
   def point_params
-    params.require(:point).permit(:point_total)
+    params.require(:point).permit(:point_total, :admin_id, :customer_id)
   end
 
 end

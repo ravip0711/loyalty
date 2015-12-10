@@ -1,6 +1,6 @@
 <h1>New Points </h1>
 
-<%= form_for(@points) do |f| %>
+<%= form_for([@customer, @point]) do |f| %>
   <%= f.label :point_total %>
   <%= f.text_field :point_total %>
   <%= f.submit %>
