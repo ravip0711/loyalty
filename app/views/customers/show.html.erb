@@ -1,9 +1,7 @@
 <h1>Show Customer</h1>
 
 Points:
-<% @points.each do |p| %>
-  <%= p.point_total %>
-<% end %>
+<%= @points %>
 <br>
 <button><%= link_to "Add Points", new_customer_point_path(@customer.id, @points) %></button>
 <button><%= link_to "Redeem Points", new_customer_point_path(@customer.id) %></button>

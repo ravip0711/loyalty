@@ -25,7 +25,8 @@ class CustomersController < ApplicationController
 
   def show
     @customer = Customer.find(params[:id])
-    @points = @customer.points
+    points_array = @customer.points.map(&:point_total)
+    @points = points_array.reduce(:+)
   end
 
   private
