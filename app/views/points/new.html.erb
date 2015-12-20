@@ -11,7 +11,7 @@
 <h2>Delete Points</h2>
 <%= form_for([@customer, @point], method: "delete") do |f| %>
   <%= f.label :point_total %>
-  <%= f.text_field :point_total %>
+  <%= f.number_field :point_total %>
   <%= f.submit %>
 <% end %>
 

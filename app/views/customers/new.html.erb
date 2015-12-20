@@ -3,7 +3,7 @@
 <% if @customer.errors.any? %>
   <div id="error_explanation"></div>
     <h2><%= pluralize(@customer.errors.count, "error") %> prohibited this customer from being saved:</h2>
-
+    
     <ul>
       <% @customer.errors.full_messages.each do |msg| %>
       <li><%= msg %></li>
@@ -12,27 +12,6 @@
   </div>
 <% end %> 
 
-<%= form_for @customer do |f| %>
-  <%= f.label :first_name %>
-  <%= f.text_field :first_name %><br>
-
-  <%= f.label :last_name %>
-  <%= f.text_field :last_name %><br>
-
-  <%= f.label :phone %>
-  <%= f.text_field :phone %><br>
-
-  <%= f.label :email %>
-  <%= f.text_field :email %><br>
-
-  <%= f.label :zip_code %>
-  <%= f.text_field :zip_code %><br>
-
-  <%= f.label :birthday %>
-  <%= f.date_field :birthday %><br>
-
-  <%= f.submit %>
-
-<% end %>
+<%= render partial: 'form' %>
 
 <%= link_to "Home", root_path %>
