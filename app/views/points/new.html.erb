@@ -4,7 +4,8 @@
 <%= form_for([@customer, @point]) do |f| %>
   <%= f.label :point_total %>
   <%= f.text_field :point_total %>
-  <%= f.submit %>
+  <%= f.submit data: {confirm: "Really add the article?"}
+ %>
 <% end %>
 
 <!-- working on this form to delete point by adding negative automatically -->

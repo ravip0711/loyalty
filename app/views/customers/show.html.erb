@@ -6,6 +6,13 @@ Points:
 <button><%= link_to "Add Points", new_customer_point_path(@customer.id, @points) %></button>
 <button><%= link_to "Redeem Points", new_customer_point_path(@customer.id) %></button>
 
+<!-- working on this to show buttons to press to redeem bonuses -->
+<% if @points > 100  %>
+  <%= "hello"  %>
+  <% else %>
+  <%= "two" %>
+<% end %>
+
 <ul>
   <li>First Name: <%= @customer.first_name %></li>
   <li>Last Name: <%= @customer.last_name %></li>
