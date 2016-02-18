@@ -15,5 +15,6 @@
 //= require maskedinput
 //= require turbolinks
 //= require jquery
+//= require jquery.turbolinks
 //= require bootstrap-sprockets
 //= require_tree .
