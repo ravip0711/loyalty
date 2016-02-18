@@ -1,13 +1,9 @@
-<h1>Loyalty Home Page</h1>
-
-<!-- put link_to for finding an existing customer -->
-
-<%= form_tag("search", method: "get") do %>
-<%= label :phone, "Your Phone Number:" %><br>
-<%= text_field_tag :phone %>
-<%= submit_tag "Search" %>
-<% end %>
-
-<%= link_to "New Customer", new_customer_path %>
-<br>
-<%= link_to "Admin", admin_root_path, data: {confirm: "You are about to enter the deep dark secrets"} %>
+<div class="container-fluid">
+  <div class="row text-center">
+    <h1>Enter Your Phone Number Below:</h1>
+    <%= form_tag("search", method: "get") do %>
+    <%= text_field_tag :phone, nil, placeholder: "Phone Number", maxlength: 10 %>
+    <%= submit_tag "Enter" %>
+    <% end %>
+  </div>
+</div>

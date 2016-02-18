@@ -5,8 +5,12 @@ source 'https://rubygems.org'
 gem 'rails', '4.1.5'
 # Use postgresql as the database for Active Record
 gem 'pg'
+# Use for Bootstrap with sass
+gem 'bootstrap-sass', '~> 3.3.6'
+# gem 'bootstrap-sass', '~> 3.3.5'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.3'
+gem 'sass-rails', '>= 3.2'
+# gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
@@ -38,8 +42,6 @@ group :development, :test do
   gem 'faker'
 end
 
-gem 'activeadmin', github: 'activeadmin'
-
 #used with active admin
 gem 'devise'
 gem 'cancan'
@@ -48,6 +50,9 @@ gem 'pundit'
 
 #for heroku static asset serving
 gem 'rails_12factor', group: :production
+
+# Phone input using Jquery masked library
+gem 'maskedinput-rails'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
