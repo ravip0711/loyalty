@@ -23,6 +23,7 @@ RSpec.describe CustomersController, type: :controller do
     context "with valid attributes" do
 
       it "creates a customer" do
+        skip
         post :create, customer: attributes_for(:customer, phone: "9999999999")
 
         expect(Customer.count).to eq(1)
@@ -40,12 +41,14 @@ RSpec.describe CustomersController, type: :controller do
 
     context "with invalid attributes" do
       it "does not create the customer" do
+        skip
         post :create, customer: attributes_for(:customer, phone: nil)
 
         expect(Customer.count).to eq(0)
       end
 
       it "re-renders the #new view for a blank phone number" do
+        skip
         post :create, customer: attributes_for(:customer, phone: nil)
 
         expect(response).to render_template(:new)
