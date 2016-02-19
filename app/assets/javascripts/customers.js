@@ -1,3 +1,3 @@
-jQuery('page:load', function($){
-   $("#phone").mask("(999) 999-9999");
+$(document).ready(function(){
+  $('#phone').mask('(000) 000-0000');
 });

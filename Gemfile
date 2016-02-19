@@ -53,12 +53,6 @@ gem 'pundit'
 #for heroku static asset serving
 gem 'rails_12factor', group: :production
 
-# Phone input using Jquery masked library
-gem 'maskedinput-rails'
-
-# Simple form to make forms better
-gem 'simple_form'
-
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

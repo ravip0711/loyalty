@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   root 'customers#index'
   
-  get '/search', to: 'customers#search'
+  post '/search', to: 'customers#search'
   
   resources :customers do
     resources :points do

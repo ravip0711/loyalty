@@ -91,7 +91,6 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
-    maskedinput-rails (1.4.0.0)
     method_source (0.8.2)
     mime-types (1.25.1)
     mini_portile2 (2.0.0)
@@ -166,9 +165,6 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
-    simple_form (3.2.1)
-      actionpack (> 4, < 5.1)
-      activemodel (> 4, < 5.1)
     slop (3.6.0)
     spring (1.6.3)
     sprockets (3.5.2)
@@ -212,7 +208,6 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   jquery-turbolinks
-  maskedinput-rails
   pg
   pry
   pry-nav
@@ -222,7 +217,6 @@ DEPENDENCIES
   rspec-rails
   sass-rails (>= 3.2)
   sdoc (~> 0.4.0)
-  simple_form
   spring
   turbolinks
   uglifier (>= 1.3.0)

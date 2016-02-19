@@ -12,7 +12,6 @@
 // about supported directives.
 //= require jquery
 //= require jquery_ujs
-//= require maskedinput
 //= require turbolinks
 //= require jquery
 //= require jquery.turbolinks
