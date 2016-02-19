@@ -35,6 +35,7 @@ class CustomersController < ApplicationController
     end
 
     def standardise_numbers
-      params[:phone].gsub!(/\D/, "")
+      str_params = params[:phone].to_s
+      params[:phone] = str_params.gsub!(/\D/, "")
     end
 end
