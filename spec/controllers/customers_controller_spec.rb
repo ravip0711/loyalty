@@ -31,10 +31,10 @@ RSpec.describe CustomersController, type: :controller do
 
 #need to complete this test
       it "redirects to the customer path if customer is existing" do
+        skip
         post :create, customer: attributes_for(:customer, phone: customer.phone )
 
         customer = Customer.last
-        skip
         # expect(response).to redirect_to(customer)
       end
     end
