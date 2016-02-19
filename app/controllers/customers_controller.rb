@@ -2,13 +2,12 @@ class CustomersController < ApplicationController
   before_filter :standardise_numbers, :only => [ :search, :create, :update ]
 
   def search
-    render :text => params
-    # if @customer = Customer.find_by(phone: params[:phone])
-    #   redirect_to @customer
-    # else
-    #   @customer = Customer.new(phone: params[:phone])
-    #   render :new
-    # end
+    if @customer = Customer.find_by(phone: params[:phone])
+      redirect_to @customer
+    else
+      @customer = Customer.new(phone: params[:phone])
+      render :new
+    end
   end
 
   def new
