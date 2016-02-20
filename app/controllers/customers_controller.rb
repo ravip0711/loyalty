@@ -1,6 +1,4 @@
 class CustomersController < ApplicationController
-  before_filter :standardise_numbers, :only => [ :search, :create, :update ]
-
   def search
     if @customer = Customer.find_by(phone: params[:phone])
       redirect_to @customer
@@ -29,13 +27,7 @@ class CustomersController < ApplicationController
   end
 
   private
-
-    def customer_params
-      params.require(:customer).permit(:first_name, :last_name, :phone, :email, :zip_code, :birthday)
-    end
-
-    def standardise_numbers
-      str_params = params[:phone].to_s
-      params[:phone] = str_params.gsub!(/\D/, "")
-    end
+  def customer_params
+    params.require(:customer).permit(:first_name, :last_name, :phone, :email, :zip_code, :birthday)
+  end
 end

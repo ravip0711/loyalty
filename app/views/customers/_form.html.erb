@@ -25,7 +25,7 @@
           </div>
           <div class="form-group">
             <%= f.label :birthday, class: "control-label" %>
-            <%= f.date_field :birthday, class: "form-control" %>
+            <%= f.date_select :birthday, order: [:month, :day, :year], add_month_numbers: true, end_year: Date.today.year - 100, start_year: Date.today.year - 10, class: "form-control" %>
           </div>
           <div class="text-center">
             <%= f.submit "Enter", class: "btn-primary btn-lg" %>

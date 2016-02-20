@@ -52,6 +52,11 @@ gem 'pundit'
 #for heroku static asset serving
 gem 'rails_12factor', group: :production
 
+# Add <% console %> in views to use console in browser
+group :development, :test do
+    gem 'web-console', '~> 2.0'
+end
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
