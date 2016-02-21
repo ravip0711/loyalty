@@ -5,8 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-Customer.create(id: 1, first_name: "Rav", last_name: "Pat", phone: "1234", email: "rav@pat.com", zip_code: "12345", birthday: "10/5/95")
-Customer.create(id: 2, first_name: "Shi", last_name: "Pat", phone: "12345", email: "shi@pat.com", zip_code: "12345", birthday: "10/5/95")
+Customer.create(id: 1, first_name: "Bot", last_name: "Example", phone: "1111111111", email: "bot@example.com", zip_code: "12345", birthday: "1995/05/15")
+Customer.create(id: 2, first_name: "Botty", last_name: "Example", phone: "2222222222", email: "botty@example.com", zip_code: "23456", birthday: "1995/06/16")
 Point.create(point_total: 50, customer_id: 1)
 Point.create(point_total: 50, customer_id: 1)
 Point.create(point_total: 50, customer_id: 2)
