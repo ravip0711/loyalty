@@ -4,7 +4,7 @@ FactoryGirl.define do
     last_name { Faker::Name.last_name }
     phone { Faker::Number.number(10) }
     email { Faker::Internet.email }
-    zip_code { Faker::Address.zip_code }
-    birthday { Faker::Date.backward(100) }
+    zip_code { Faker::Number.number(5) }
+    birthday { Faker::Date.backward(30) }
   end
 end

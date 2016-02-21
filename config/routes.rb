@@ -2,8 +2,6 @@ Rails.application.routes.draw do
 
   root 'customers#index'
   
-  post '/search', to: 'customers#search'
-  
   resources :customers do
     resources :points do
       get :add

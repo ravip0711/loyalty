@@ -1,14 +1,10 @@
 class CustomersController < ApplicationController
-  def search
+  def new
     if @customer = Customer.find_by(phone: params[:phone])
       redirect_to @customer
     else
       @customer = Customer.new(phone: params[:phone])
-      render :new
     end
-  end
-
-  def new
   end
   
   def create

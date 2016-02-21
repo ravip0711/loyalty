@@ -15,7 +15,7 @@
   <li>Phone: <%= @customer.phone %></li>
   <li>Email: <%= @customer.email %></li>
   <li>Zip-Code: <%= @customer.zip_code %></li>
-  <li>Birthday: <%= @customer.birthday %></li>
+  <li>Birthday: <%= @customer.birthday.strftime("%B, %d") %></li>
 </ul>
 
 <%= link_to "Back", customers_path %>

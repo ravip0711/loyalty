@@ -53,7 +53,7 @@ gem 'pundit'
 gem 'rails_12factor', group: :production
 
 # Add <% console %> in views to use console in browser
-group :development, :test do
+group :development do
     gem 'web-console', '~> 2.0'
 end
 
