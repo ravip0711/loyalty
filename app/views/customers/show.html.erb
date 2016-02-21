@@ -6,8 +6,14 @@
   <h3>Points: <%= @points %></h3>
 <% end %>
 <br>
-<button><%= link_to "Add Points", new_customer_point_path(@customer.id, @points) %></button>
-<button><%= link_to "Redeem Points", new_customer_point_path(@customer.id) %></button>
+
+<% if admin_logged? %>
+  <button><%= link_to "Add Points", new_customer_point_path(@customer.id, @points) %></button>
+  <button><%= link_to "Redeem Points", new_customer_point_path(@customer.id) %></button>
+<% else %>
+  <%= render "admin_form" %>
+<% end %>
+
 
 <ul>
   <li>First Name: <%= @customer.first_name %></li>
