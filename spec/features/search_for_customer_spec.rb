@@ -9,6 +9,10 @@ feature 'Search by phone' do
     click_on "Enter"
 
     expect(page).to have_content("#{customer.first_name}")
+    expect(page).to have_content("#{customer.last_name}")
+    expect(page).to have_content("#{customer.phone}")
+    expect(page).to have_content("#{customer.email}")
+    expect(page).to have_content("#{customer.zip_code}")
   end
   scenario 'non-existing customer send to sign up page' do
 
