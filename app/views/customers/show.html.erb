@@ -1,27 +1,33 @@
-<h1>Show Customer</h1>
-
-<% if @points.nil? %>
-  <h3>You currently do not have any points.</h3>
-<% else %>
-  <h3>Points: <%= @points %></h3>
-<% end %>
-<br>
-
-<% if admin_logged? %>
-  <button><%= link_to "Add Points", new_customer_point_path(@customer.id, @points) %></button>
-  <button><%= link_to "Redeem Points", new_customer_point_path(@customer.id) %></button>
-<% else %>
-  <%= render "admin_form" %>
-<% end %>
-
-
-<ul>
-  <li>First Name: <%= @customer.first_name %></li>
-  <li>Last Name: <%= @customer.last_name %></li>
-  <li>Phone: <%= @customer.phone %></li>
-  <li>Email: <%= @customer.email %></li>
-  <li>Zip-Code: <%= @customer.zip_code %></li>
-  <li>Birthday: <%= @customer.birthday.strftime("%B, %d") %></li>
-</ul>
-
-<%= link_to "Back", customers_path %>
+<div class="container">
+  <h1 class="text-center">Show Customer</h1>
+  <div class="col-sm-4 col-sm-offset-4">
+    <div class="row">
+      <% if @points.nil? %>
+        <h3>You currently do not have any points.</h3>
+      <% else %>
+        <h3>Points: <%= @points %></h3>
+      <% end %>
+    </div>
+    <div class="row">
+      <% if admin_logged? %>
+        <button><%= link_to "Add Points", new_customer_point_path(@customer.id, @points) %></button>
+        <button><%= link_to "Redeem Points", new_customer_point_path(@customer.id) %></button>
+      <% else %>
+        <%= render "employees/employee_login" %>
+      <% end %>
+    </div>
+    <div class="row">
+      <ul>
+        <li>First Name: <%= @customer.first_name %></li>
+        <li>Last Name: <%= @customer.last_name %></li>
+        <li>Phone: <%= @customer.phone %></li>
+        <li>Email: <%= @customer.email %></li>
+        <li>Zip-Code: <%= @customer.zip_code %></li>
+        <li>Birthday: <%= @customer.birthday.strftime("%B, %d") %></li>
+      </ul>
+    </div>
+  <div class="row">
+    <%= link_to "Back", customers_path %>
+  </div>
+  </div>
+</div>

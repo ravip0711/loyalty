@@ -9,6 +9,12 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :employees, only: [:new, :create] do
+    member do
+      get :login
+    end
+  end
+
   # resources :customers do
   #   resources :points
   # end
