@@ -16,21 +16,6 @@ class PointsController < ApplicationController
     end
   end
 
-# working on this method to delete point by adding negative automatically
-  # def delete
-  #   @customer = Customer.find(params[:customer_id])
-  #   @point = Point.new(-point_params)
-  #   @point.customer_id = @customer.id
-  #   if @point.save
-  #     redirect_to @customer
-  #   else
-  #     render 'show'
-  #   end
-  # end
-
-  def add
-  end
-
   private
   
   def point_params

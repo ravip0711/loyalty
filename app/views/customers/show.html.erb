@@ -1,5 +1,4 @@
-<h1 class="text-center">Show Customer</h1>
-<div class="col-sm-4 col-sm-offset-4">
+<h1>Show Customer</h1>
   <div class="row">
     <% if @points.nil? %>
       <h3>You currently do not have any points.</h3>
@@ -14,17 +13,34 @@
       <%= render "employees/employee_login" %>
     <% end %>
   </div>
-  <div class="row">
-    <ul>
-      <li>First Name: <%= @customer.first_name %></li>
-      <li>Last Name: <%= @customer.last_name %></li>
-      <li>Phone: <%= @customer.phone %></li>
-      <li>Email: <%= @customer.email %></li>
-      <li>Zip-Code: <%= @customer.zip_code %></li>
-      <li>Birthday: <%= @customer.birthday.strftime("%B, %d") %></li>
-    </ul>
+  <div class="row-space table-responsive">
+    <table class="table table-bordered">
+      <tr>
+        <td>First Name</td>
+        <td><%= @customer.first_name %></td>
+      </tr>
+      <tr>
+        <td>Last Name</td>
+        <td><%= @customer.last_name %></td>
+      </tr>
+      <tr>
+        <td>Phone</td>
+        <td><%= @customer.phone %></td>
+      </tr>
+      <tr>
+        <td>Email</td>
+        <td><%= @customer.email %></td>
+      </tr>
+      <tr>
+        <td>Zip-Code</td>
+        <td><%= @customer.zip_code %></td>
+      </tr>
+      <tr>
+        <td>Birthday</td>
+        <td><%= @customer.birthday.strftime("%B, %d") %></td>
+      </tr>
+    </table>
   </div>
 <div class="row">
   <%= link_to "Back", customers_path %>
-</div>
 </div>
