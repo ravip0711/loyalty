@@ -10,8 +10,7 @@
     </div>
     <div class="row">
       <% if employee_logged_in? %>
-        <button><%= link_to "Add Points", new_customer_point_path(@customer.id, @points) %></button>
-        <button><%= link_to "Redeem Points", new_customer_point_path(@customer.id) %></button>
+        <%= link_to "Add Points", new_customer_point_path(@customer), class: "btn btn-primary btn-lg" %>
       <% else %>
         <%= render "employees/employee_login" %>
       <% end %>

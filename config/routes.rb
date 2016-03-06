@@ -4,8 +4,6 @@ Rails.application.routes.draw do
   
   resources :customers do
     resources :points do
-      get :add
-      get :delete
     end
   end
 

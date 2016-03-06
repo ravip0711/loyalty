@@ -1,19 +1,23 @@
-<h1>New Points </h1>
-
-<h2>Add Points</h2>
-<%= form_for([@customer, @point]) do |f| %>
-  <%= f.label :point_total %>
-  <%= f.text_field :point_total %>
-  <%= f.submit data: {confirm: "Really add the article?"}
- %>
-<% end %>
-
-<!-- working on this form to delete point by adding negative automatically -->
-<h2>Delete Points</h2>
-<%= form_for([@customer, @point], method: "delete") do |f| %>
-  <%= f.label :point_total %>
-  <%= f.number_field :point_total %>
-  <%= f.submit %>
-<% end %>
-
-<%= link_to "Back", customer_path(@customer) %>
+<div class="container">
+  <h1 class="text-center">New Points</h1>
+  <div class="col-sm-4 col-sm-offset-4">
+    <div class="row">
+			<h2>Add Points</h2>
+			<%= form_for([@customer, @point]) do |f| %>
+			  <%= f.label :point_total %>
+			  <%= f.number_field :point_total %>
+			  <%= f.submit "Add points", data: {confirm: "Really want to add points?"}, class: "btn btn-primary btn-lg" %>
+			<% end %>
+		</div>
+		<div class="row">	
+		<!-- working on this form to delete point by adding negative automatically -->
+			<h2>Delete Points</h2>
+			<%= form_for([@customer, @point], method: "delete") do |f| %>
+			  <%= f.label :point_total %>
+			  <%= f.number_field :point_total %>
+			  <%= f.submit "Delete points", class: "btn btn-primary btn-lg" %>
+			<% end %>
+		</div>
+	</div>
+</div>
+	<%= link_to "Back", customer_path(@customer) %>
