@@ -1,15 +1,13 @@
-<div class="container">
-  <h1 class="text-center">Enter Your Phone Number:</h1>
-  <div class="row text-center row-space">
-    <div class="form-inline">
-      <%= form_tag(new_customer_path, method: :get) do %>
-      <div class="form-group">
-        <%= telephone_field_tag :phone, nil, placeholder: "Phone Number", required: true, pattern: "[0-9]{10}", title: "Number must be 10 digits", maxlength: "10", class: "input-lg" %>
-      </div>
-      <div class="form-group">
-        <%= submit_tag "Enter", class: "btn btn-primary btn-lg" %>
-      </div>
-      <% end %>
+<h1 class="text-center">Enter Your Phone Number:</h1>
+<div class="row text-center row-space">
+  <div class="form-inline">
+    <%= form_tag(new_customer_path, method: :get) do %>
+    <div class="form-group">
+      <%= telephone_field_tag :phone, nil, placeholder: "Phone Number", required: true, pattern: "[0-9]{10}", title: "Number must be 10 digits", maxlength: "10", class: "input-lg" %>
     </div>
+    <div class="form-group">
+      <%= submit_tag "Enter", class: "btn btn-primary btn-lg" %>
+    </div>
+    <% end %>
   </div>
 </div>

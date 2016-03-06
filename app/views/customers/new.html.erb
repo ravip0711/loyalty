@@ -1,17 +1,16 @@
-<div class="container">
-  <h1 class="text-center">New Customer</h1>
-  <div class="col-sm-4 col-sm-offset-4">
-  <% if @customer.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@customer.errors.count, "error") %> prohibited this customer from being saved:</h2>
-      <ul>
-        <% @customer.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+<h1 class="text-center">New Customer</h1>
+<div class="col-sm-4 col-sm-offset-4">
+<% if @customer.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@customer.errors.count, "error") %> prohibited this customer from being saved:</h2>
+    <ul>
+      <% @customer.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+      <% end %>
+    </ul>
   </div>
+<% end %>
 </div>
+
 
 <%= render 'form' %>

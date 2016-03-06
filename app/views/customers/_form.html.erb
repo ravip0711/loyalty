@@ -1,37 +1,35 @@
-<div class="container">
-  <div class="row">
-    <div class="col-sm-4 col-sm-offset-4">
-      <div class="form-horizontal">
-        <%= form_for @customer do |f| %>
-          <div class="form-group">
-            <%= f.label :first_name, class: "control-label" %>
-            <%= f.text_field :first_name, class: "form-control" %>
-          </div>
-          <div class="form-group">
-            <%= f.label :last_name, class: "control-label" %>
-            <%= f.text_field :last_name, class: "form-control" %>
-          </div>
-          <div class="form-group">
-            <%= f.label :phone, class: "control-label" %>
-            <%= f.text_field :phone, required: true, pattern: "[0-9]{10}", title: "Number must be 10 digits", maxlength: "10", id: "phone", class: "form-control" %>
-          </div>
-          <div class="form-group">
-            <%= f.label :email, class: "control-label" %>
-            <%= f.text_field :email, class: "form-control" %>
-          </div>
-          <div class="form-group">
-            <%= f.label :zip_code, class: "control-label" %>
-            <%= f.text_field :zip_code, required: true, pattern: "[0-9]{5}", title: "Zip code must be 5 digits", maxlength: "5", class: "form-control" %>
-          </div>
-          <div class="form-group">
-            <%= f.label :birthday, class: "control-label" %>
-            <%= f.date_select :birthday, order: [:month, :day, :year], add_month_numbers: true, end_year: Date.today.year - 100, start_year: Date.today.year - 10, class: "form-control" %>
-          </div>
-          <div class="text-center">
-            <%= f.submit "Enter", class: "btn-primary btn-lg" %>
-          </div>
-        <% end %>
-      </div>
+<div class="row">
+  <div class="col-sm-4 col-sm-offset-4">
+    <div class="form-horizontal">
+      <%= form_for @customer do |f| %>
+        <div class="form-group">
+          <%= f.label :first_name, class: "control-label" %>
+          <%= f.text_field :first_name, class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :last_name, class: "control-label" %>
+          <%= f.text_field :last_name, class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :phone, class: "control-label" %>
+          <%= f.text_field :phone, required: true, pattern: "[0-9]{10}", title: "Number must be 10 digits", maxlength: "10", id: "phone", class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :email, class: "control-label" %>
+          <%= f.text_field :email, class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :zip_code, class: "control-label" %>
+          <%= f.text_field :zip_code, required: true, pattern: "[0-9]{5}", title: "Zip code must be 5 digits", maxlength: "5", class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :birthday, class: "control-label" %>
+          <%= f.date_select :birthday, order: [:month, :day, :year], add_month_numbers: true, end_year: Date.today.year - 100, start_year: Date.today.year - 10, class: "form-control" %>
+        </div>
+        <div class="text-center">
+          <%= f.submit "Enter", class: "btn-primary btn-lg" %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
