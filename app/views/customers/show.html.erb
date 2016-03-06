@@ -9,7 +9,7 @@
       <% end %>
     </div>
     <div class="row">
-      <% if admin_logged? %>
+      <% if employee_logged_in? %>
         <button><%= link_to "Add Points", new_customer_point_path(@customer.id, @points) %></button>
         <button><%= link_to "Redeem Points", new_customer_point_path(@customer.id) %></button>
       <% else %>

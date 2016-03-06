@@ -10,3 +10,4 @@ Customer.create(id: 2, first_name: "Botty", last_name: "Example", phone: "222222
 Point.create(point_total: 50, customer_id: 1)
 Point.create(point_total: 50, customer_id: 1)
 Point.create(point_total: 50, customer_id: 2)
+Employee.create(id: 1, user_name: "exampleemployee", passcode: "1234")

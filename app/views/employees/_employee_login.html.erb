@@ -1,9 +1,9 @@
-<h1 class="text-center">Admin Password:</h1>
+<h1 class="text-center">Admin Passcode:</h1>
 <div class="row text-center row-space">
   <div class="form-inline">
     <%= form_tag(login_employee_path, method: :get) do %>
       <div class="form-group">
-      <%= password_field_tag :password, nil, placeholder: "Admin Password", required: true, pattern: "[0-9]{4}", title: "passcode must be 4 digits", maxlength: "4", class: "input-lg" %>
+      <%= password_field_tag :passcode, nil, placeholder: "Admin Passcode", required: true, pattern: "[0-9]{4}", title: "passcode must be 4 digits", maxlength: "4", class: "input-lg" %>
       </div>
       <div class="form-group">
         <%= submit_tag "Enter", class: "btn btn-primary btn-lg" %>
