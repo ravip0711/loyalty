@@ -1,16 +1,3 @@
 <h1>New Customer</h1>
-<div>
-<% if @customer.errors.any? %>
-  <div id="error_explanation">
-    <h2><%= pluralize(@customer.errors.count, "error") %> prohibited this customer from being saved:</h2>
-    <ul>
-      <% @customer.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-      <% end %>
-    </ul>
-  </div>
-<% end %>
-</div>
-
 
 <%= render 'form' %>

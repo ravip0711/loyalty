@@ -1,12 +1,14 @@
 <h1>New Points</h1>
-<div class="row">
-	<h2>Add Points</h2>
+<div class="form-horizontal">
 	<%= form_for([@customer, @point]) do |f| %>
-		<%= f.label :point_total %>
-		<%= f.number_field :point_total%>
-		<%= f.submit "Add points", data: {confirm: "Really want to add points?"}, class: "btn btn-primary btn-lg" %>
+		<div class="form-group">
+			<%= f.number_field :point_total, placeholder: "Number of points"%>
+		</div>
+		<div class="form-group">
+		<%= f.submit "Add Points", data: {confirm: "Proceed adding points?"}, class: "btn btn-primary btn-lg" %>
+		</div>
 	<% end %>
 </div>
 <div class="row">
-	<%= link_to "Back", customer_path(@customer) %>
+	<%= link_to "Back", customer_path(@customer), class: "btn btn-default" %>
 </div>
