@@ -16,6 +16,19 @@
  *= require_self
  */
 
- .row-space {
-  margin-top: 25px;
- }
+.row-space {
+margin-top: 25px;
+}
+
+body {
+  background-image: url(https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=f8ff2ac781de274b979e236cf8a7271f);
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.container {
+	background-color: white;
+	opacity: .9;
+}
