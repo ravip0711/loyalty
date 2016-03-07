@@ -1,46 +1,49 @@
 <h1>Show Customer</h1>
-  <div class="row">
-    <% if @points.nil? %>
-      <h3>You currently do not have any points.</h3>
-    <% else %>
-      <h3>Points: <%= @points %></h3>
-    <% end %>
-  </div>
-  <div class="row">
-    <% if employee_logged_in? %>
-      <%= link_to "Add Points", new_customer_point_path(@customer), class: "btn btn-primary btn-lg" %>
-    <% else %>
-      <%= render "employees/employee_login" %>
-    <% end %>
-  </div>
-  <div class="row-space table-responsive">
-    <table class="table table-bordered">
-      <tr>
-        <td>First Name</td>
-        <td><%= @customer.first_name %></td>
-      </tr>
-      <tr>
-        <td>Last Name</td>
-        <td><%= @customer.last_name %></td>
-      </tr>
-      <tr>
-        <td>Phone</td>
-        <td><%= @customer.phone %></td>
-      </tr>
-      <tr>
-        <td>Email</td>
-        <td><%= @customer.email %></td>
-      </tr>
-      <tr>
-        <td>Zip-Code</td>
-        <td><%= @customer.zip_code %></td>
-      </tr>
-      <tr>
-        <td>Birthday</td>
-        <td><%= @customer.birthday.strftime("%B, %d") %></td>
-      </tr>
-    </table>
-  </div>
 <div class="row">
-  <%= link_to "Back", customers_path %>
+  <% if @points.nil? %>
+    <h3>You currently do not have any points.</h3>
+  <% else %>
+    <h3>Points: <%= @points %></h3>
+  <% end %>
+</div>
+<div class="row">
+  <% if employee_logged_in? %>
+    <%= link_to "Add Points", new_customer_point_path(@customer), class: "btn btn-primary btn-lg" %>
+  <% else %>
+    <%= render "employees/employee_login" %>
+  <% end %>
+</div>
+<div class="row-space table-responsive">
+  <table class="table table-bordered">
+    <tr>
+      <td>First Name</td>
+      <td><%= @customer.first_name %></td>
+    </tr>
+    <tr>
+      <td>Last Name</td>
+      <td><%= @customer.last_name %></td>
+    </tr>
+    <tr>
+      <td>Phone</td>
+      <td><%= number_to_phone(@customer.phone, area_code: true) %></td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td><%= @customer.email %></td>
+    </tr>
+    <tr>
+      <td>Zip-Code</td>
+      <td><%= @customer.zip_code %></td>
+    </tr>
+    <tr>
+      <td>Birthday</td>
+      <td><%= @customer.birthday.strftime("%B, %d") %></td>
+    </tr>
+  </table>
+</div>
+<div class="row">
+  <%= link_to "Back", customers_path, class: "btn btn-default" %>
+  <% if employee_logged_in? %>
+    <%= link_to "Edit profile", edit_customer_path(@customer), class: "btn btn-default" %>
+  <% end %>
 </div>

@@ -8,8 +8,4 @@ module ApplicationHelper
     end
   end
 
-  def employee_log_out
-  	session[:current_employee_id] = nil
-  end
-
 end

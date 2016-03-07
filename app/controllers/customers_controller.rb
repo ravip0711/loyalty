@@ -1,5 +1,8 @@
 class CustomersController < ApplicationController
   def new
+    # to erase any sessions, from edit back button
+    reset_session
+    
     if @customer = Customer.find_by(phone: params[:phone])
       redirect_to @customer
     else
@@ -20,6 +23,19 @@ class CustomersController < ApplicationController
     @customer = Customer.find(params[:id])
     points_array = @customer.points.map(&:point_total)
     @points = points_array.reduce(:+)
+  end
+
+  def edit
+    @customer = Customer.find(params[:id])
+  end
+
+  def update
+    @customer = Customer.find(params[:id])
+    if @customer.update_attributes(customer_params)
+      redirect_to customer_path(@customer)
+    else
+      render :edit
+    end
   end
 
   private

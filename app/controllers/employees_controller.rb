@@ -17,10 +17,13 @@ class EmployeesController < ApplicationController
   def login
     @customer = Customer.find(params[:id])
     @employee = Employee.find_by(passcode: params[:passcode])
-    session[:current_employee_id] = @employee.id
+    
+    unless @employee.nil?
+      session[:current_employee_id] = @employee.id
+    end
+
     redirect_to customer_path(@customer)
   end
-
 
   private
 
