@@ -10,7 +10,7 @@
   <% if employee_logged_in? %>
     <%= link_to "Add Points", new_customer_point_path(@customer), class: "btn btn-primary btn-lg" %>
   <% else %>
-    <%= render "employees/employee_login" %>
+    <%= render "employees/passcode_login" %>
   <% end %>
 </div>
 <div class="row-space table-responsive">

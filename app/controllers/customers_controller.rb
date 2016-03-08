@@ -8,7 +8,7 @@ class CustomersController < ApplicationController
       redirect_to @customer
     else
       @customer = Customer.new(phone: params[:phone])
-      flash.now[:warning] = "Customer not found, please sign up!"
+      flash.now[:danger] = "Customer not found, please sign up!"
     end
   end
   
@@ -18,7 +18,7 @@ class CustomersController < ApplicationController
       flash[:success] = "#{@customer.first_name} #{@customer.last_name} was successfully saved"
       redirect_to @customer
     else
-      flash.now[:error] = "Customer was unsuccessfully saved, please check form"
+      flash.now[:danger] = "Customer was unsuccessfully saved, please check form"
       render 'new'
     end
   end
@@ -39,7 +39,7 @@ class CustomersController < ApplicationController
       flash[:success] = "Successfully updated"
       redirect_to customer_path(@customer)
     else
-      flash.now[:error] = "Unable to update, please check form"
+      flash.now[:danger] = "Unable to update, please check form"
       render :edit
     end
   end

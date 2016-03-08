@@ -1,17 +1,22 @@
 Rails.application.routes.draw do
 
+  # get 'sessions/new'
+
   root 'customers#index'
   
   resources :customers do
-    resources :points do
+    resources :points, only: [:new, :create] do
     end
   end
 
-  resources :employees, only: [:new, :create] do
+  resources :employees do
     member do
-      get :login
+      get :passcode_login
     end
   end
+    
+  get "login" => "sessions#new"
+  post "login" => "sessions#create"
 
   # resources :customers do
   #   resources :points

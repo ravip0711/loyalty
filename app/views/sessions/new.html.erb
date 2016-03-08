@@ -1,0 +1,17 @@
+<h1>Employee Log In</h1>
+<div class="form-horizontal">
+<%= form_for(:session, url: login_path) do |f| %>
+  <div class="form-group">
+    <%= f.text_field :user_name, placeholder: "User Name", class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.password_field :password, placeholder: "Password", class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.submit "Enter", class: "btn-primary btn-lg" %>
+  </div>
+<% end %>
+</div>
+<div class="row">
+  <%= link_to "Sign Up", new_employee_path, class: "btn btn-default" %>
+</div>

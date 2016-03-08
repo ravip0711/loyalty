@@ -13,8 +13,10 @@ class PointsController < ApplicationController
     @point.customer_id = @customer.id
     if @point.save
       reset_session
+      flash[:success] = "Points successfully added"
       redirect_to @customer
     else
+      flash.now[:danger] = "Points unsuccessfully added, please check the form"
       render :new
     end
   end
