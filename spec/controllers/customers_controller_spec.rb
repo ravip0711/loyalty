@@ -9,13 +9,6 @@ RSpec.describe CustomersController, type: :controller do
     end
   end
 
-#need to compelete this test
-  describe "Get #search" do
-    it "finds the customer and redirects to customer page" do
-      skip
-    end
-  end
-
 
   describe "POST #create" do
     let(:customer) { FactoryGirl.create(:customer, phone: "9999999999")}
