@@ -16,41 +16,30 @@
  *= require_self
  */
 
-.row-space {
-margin-top: 25px;
-}
-
-// body {
-//   background-image: url(https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=f8ff2ac781de274b979e236cf8a7271f);
-// 	-webkit-background-size: cover;
-// 	-moz-background-size: cover;
-// 	-o-background-size: cover;
-// 	background-size: cover;
-// }
 
 body {
-  background-image: url(https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=f8ff2ac781de274b979e236cf8a7271f);
-  background-position: center center;
+  background-image: url('retail_store.jpeg');
+  background-color: white;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center, center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: cover;
+}
+
+// @media only screen and (max-width: 767px) {
+//   body {
+//     The file size of this background image is 93% smaller
+//        to improve page load speed on mobile internet connections
+//     background-image: url('retail_store.jpeg');
+//   }
+// }
+
+#content {
   background-color: white;
-  background-attachment: fixed;
-}
-
-@media only screen and (max-width: 767px) {
-  body {
-    /* The file size of this background image is 93% smaller
-       to improve page load speed on mobile internet connections */
-	  background-image: url(https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=f8ff2ac781de274b979e236cf8a7271f);
-  }
-}
-
-.container {
-	background-color: white;
-	opacity: .93;
-	min-height: 200px;
-	padding: 20px;
+  opacity: .93;
 }
 
 // Error messages
@@ -61,4 +50,9 @@ body {
 // Removing dot styling with lists
 ul {
   list-style-type: none;
+}
+
+// create extra space between rows
+.row-space {
+  margin-top: 20px;
 }

@@ -1,6 +1,7 @@
 <h1>Employee Profile</h1>
 
 <h3><%= @employee.user_name %></h3>
+<h3>Created On: <%= @employee.created_at.strftime("%B %d, %Y at %I:%M:%S%p")  %></h3>
 
 <%= link_to "Edit", edit_employee_path, class: "btn btn-default" %>
 

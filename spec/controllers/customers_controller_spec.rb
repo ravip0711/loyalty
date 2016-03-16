@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe CustomersController, type: :controller do
-
   describe "GET #index" do
     it "returns http success" do
       get :index
@@ -11,13 +10,10 @@ RSpec.describe CustomersController, type: :controller do
 
 
   describe "POST #create" do
-    let(:customer) { FactoryGirl.create(:customer, phone: "9999999999")}
-
     context "with valid attributes" do
 
       it "creates a customer" do
-        skip
-        post :create, customer: attributes_for(:customer, phone: "9999999999")
+        create(:customer)
 
         expect(Customer.count).to eq(1)
       end
@@ -25,10 +21,9 @@ RSpec.describe CustomersController, type: :controller do
 #need to complete this test
       it "redirects to the customer path if customer is existing" do
         skip
-        post :create, customer: attributes_for(:customer, phone: customer.phone )
+        customer = create(:customer)
 
-        customer = Customer.last
-        # expect(response).to redirect_to(customer)
+        expect(response).to redirect_to(customer)
       end
     end
 
