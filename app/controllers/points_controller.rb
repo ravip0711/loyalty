@@ -1,4 +1,6 @@
 class PointsController < ApplicationController
+  # before_validation :employee_active on: :create
+
   def new
     @customer = Customer.find(params[:customer_id])
     @point = Point.new
@@ -29,5 +31,9 @@ class PointsController < ApplicationController
   def point_params
     params.require(:point).permit(:point_total)
   end
+
+  # def employee_active
+    
+  # end
 
 end

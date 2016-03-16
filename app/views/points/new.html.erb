@@ -2,7 +2,7 @@
 <div class="form-horizontal">
 	<%= form_for([@customer, @point]) do |f| %>
 		<div class="form-group">
-			<%= f.number_field :point_total, placeholder: "Number of points"%>
+			<%= f.number_field :point_total, placeholder: "Number of points", required: true, pattern: "[0-9]{3}", title: "Number must be a resonable number", maxlength: "3", min: "0" %>
 		</div>
 		<div class="form-group">
 		<%= f.submit "Add Points", data: {confirm: "Proceed adding points?"}, class: "btn btn-primary btn-lg" %>

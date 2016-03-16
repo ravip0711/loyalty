@@ -1,4 +1,6 @@
 class CustomersController < ApplicationController
+
+
   def new
     # to erase any sessions, from edit back button
     reset_session
@@ -48,4 +50,5 @@ class CustomersController < ApplicationController
   def customer_params
     params.require(:customer).permit(:first_name, :last_name, :phone, :email, :zip_code, :birthday)
   end
+
 end
