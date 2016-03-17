@@ -1,5 +1,7 @@
 class PointsController < ApplicationController
   # before_validation :employee_active on: :create
+  # before_action :employee_logged, only: [ :new, :create]
+
 
   def new
     @customer = Customer.find(params[:customer_id])
@@ -32,8 +34,12 @@ class PointsController < ApplicationController
     params.require(:point).permit(:point_total)
   end
 
-  # def employee_active
-    
+  # def employee_logged
+  #   @employee = Employee.find(params[:id])
+  #   unless @employee.id == session[:current_employee_id]
+  #     flash[:danger] = "Must log in first"
+  #     redirect_to login_path
+  #   end
   # end
 
 end

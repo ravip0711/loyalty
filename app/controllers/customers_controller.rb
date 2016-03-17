@@ -1,5 +1,5 @@
 class CustomersController < ApplicationController
-
+  before_action :employee_logged_in, only: [:edit, :update, :destroy]
 
   def new
     # to erase any sessions, from edit back button
@@ -49,6 +49,14 @@ class CustomersController < ApplicationController
   private
   def customer_params
     params.require(:customer).permit(:first_name, :last_name, :phone, :email, :zip_code, :birthday)
+  end
+
+  def employee_logged_in
+    @customer = Customer.find(params[:id])
+    unless !session[:current_employee_id].nil?
+      flash[:danger] = "Employee needs to be logged in to edit"
+      redirect_to customer_path(@customer)
+    end
   end
 
 end

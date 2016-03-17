@@ -1,4 +1,6 @@
 class EmployeesController < ApplicationController
+  before_action :own_employee, only: [:show, :edit, :update]
+
   def show
     @employee = Employee.find(params[:id])
   end
@@ -10,6 +12,7 @@ class EmployeesController < ApplicationController
   def create
     @employee = Employee.new(employee_params)
     if @employee.save
+      session[:current_employee_id] = @employee.id
       flash[:success] = "#{@employee.user_name} successfully saved"
       redirect_to @employee
     else
@@ -37,7 +40,9 @@ class EmployeesController < ApplicationController
     @customer = Customer.find(params[:id])
     @employee = Employee.find_by(passcode: params[:passcode])
     
-    unless @employee.nil?
+    if @employee.nil?
+      flash[:success] = "Employee not found"
+    else
       session[:current_employee_id] = @employee.id
       flash[:success] = "Employee Logged In"
     end
@@ -46,8 +51,15 @@ class EmployeesController < ApplicationController
   end
 
   private
-
   def employee_params
     params.require(:employee).permit(:user_name, :password, :password_confirmation, :passcode)
+  end
+
+  def own_employee
+    @employee = Employee.find(params[:id])
+    unless @employee.id == session[:current_employee_id]
+      flash[:danger] = "Must log in first"
+      redirect_to login_path
+    end
   end
 end
